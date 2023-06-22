@@ -2,6 +2,7 @@ import Head from "next/head";
 import { PostCard, Categories, PostWidget } from '../components';
 import { getPosts } from "@/services";
 import FeaturedPosts from "@/sections/FeaturedPosts";
+import { Adsense } from "../components";
 
 
 export default function Home({ posts }) {
@@ -10,6 +11,7 @@ export default function Home({ posts }) {
       <Head>
         <title>Currencyforte</title>
       </Head>
+      <Adsense />
       <FeaturedPosts />
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="lg:col-span-8 col-span-1">
