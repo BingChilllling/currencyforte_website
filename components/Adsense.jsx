@@ -1,29 +1,22 @@
-import React, { useEffect } from "react";
+import Head from "next/head";
 
-export default function Adsense() {
-  const loadAds = () => {
-    try {
-      if (typeof window !== "undefined") {
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-      }
-    } catch (error) {
-      console.log("adsense error", error.message);
-    }
-  };
+export default function Adsense({ title, description}) {
+    return (
+        <Head>
+            <title>{title}</title>
+            <meta name="description" content={description} />
+            <meta property="og:title" content={title} />
 
-  useEffect(() => {
-    loadAds();
-  }, []);
-
-  return (
-    <ins
-      className="adsbygoogle"
-      style={{ display: "block" }}
-      data-ad-client="ca-pub-6469406013541860"
-      data-ad-slot="9815451008"
-      data-ad-format="auto"
-      data-full-width-responsive="true"
-    ></ins>
-  );
+            {typeof window !== 'undefined' && (
+                process.env.NODE_ENV === 'production' && (
+                    <script
+                        async
+                        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6469406013541860"
+                        crossorigin="anonymous"
+                    >
+                    </script>
+                )
+            )}
+        </Head>
+    )
 }
-
