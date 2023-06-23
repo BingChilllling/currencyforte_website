@@ -4,7 +4,6 @@ import { getPosts } from "@/services";
 import FeaturedPosts from "@/sections/FeaturedPosts";
 
 
-
 export default function Home({ posts }) {
   return (
     <div className="container mx-auto px-10 mb-8">
