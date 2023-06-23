@@ -1,4 +1,5 @@
-import React, { useEffect, useRouter} from 'react';
+import React, { useEffect } from 'react';
+import { useRouter } from 'next/router';
 import 'tailwindcss/tailwind.css';
 import { Layout } from '@/components';
 import '@/styles/globals.scss';
