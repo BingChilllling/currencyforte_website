@@ -4,6 +4,7 @@ import { Layout } from '@/components';
 import '@/styles/globals.scss';
 import * as gtag from '../lib/gtag';
 import Head from 'next/head';
+import Script from 'next/script';
 
 
 function MyApp({ Component, pageProps }) {
