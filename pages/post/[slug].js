@@ -2,6 +2,7 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import { getPosts, getPostDetails } from '@/services';
 import {PostDetail, Categories, Author, Comments, CommentsForm, PostWidget, Loader } from '../../components';
+import { AdjacentPosts } from '../../sections/AdjacentPosts';
 
 const PostDetails = ({ post }) => {
     const router = useRouter();
