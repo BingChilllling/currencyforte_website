@@ -6,6 +6,7 @@ import '@/styles/globals.scss';
 import * as gtag from '../lib/gtag';
 import Head from 'next/head';
 import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/react';
 
 
 function MyApp({ Component, pageProps }) {
@@ -43,6 +44,7 @@ function MyApp({ Component, pageProps }) {
         src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
       />
       <Component {...pageProps} />
+      <Analytics />
     </Layout>
   )
 }
