@@ -3,6 +3,10 @@ import moment from 'moment';
 import Link from 'next/link';
 import { getRecentPosts, getSimilarPosts } from '@/services';
 
+const contentfulImageLoader = ({ src, width }) => {
+    return `${src}?w=${width}`;
+  };
+
 const PostWidget = ({ categories, slug }) => {
     const [ relatedPosts,  setRelatedPosts] = useState([]);
 
@@ -28,10 +32,9 @@ const PostWidget = ({ categories, slug }) => {
             {relatedPosts.map((post) => (
                 <div key={post.title} className='flex items-center w-full mb-4'>
                     <div className='w-16 flex-none'>
-                        <img
+                        <Image
+                            loader={contentfulImageLoader}
                             alt={post.title}
-                            height="60px"
-                            width="60px"
                             className='align-middle rounded-full'
                             src={post.featuredImage.url}
                         />
