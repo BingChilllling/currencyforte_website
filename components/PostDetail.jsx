@@ -1,5 +1,6 @@
 import React from 'react';
 import moment from 'moment';
+import Image from 'next/image';
 
 const PostDetail = ({ post }) => {
     const getContentFragment = (index, text, obj, type) => {
@@ -17,6 +18,9 @@ const PostDetail = ({ post }) => {
           if (obj.underline) {
             modifiedText = (<u key={index}>{text}</u>);
           }
+          if (obj.numbered) {
+            modifiedText = (<ol key={index}>{text}</ol>);
+          }
         }
     
         switch (type) {
@@ -28,7 +32,7 @@ const PostDetail = ({ post }) => {
             return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
           case 'image':
             return (
-              <img
+              <Image
                 key={index}
                 alt={obj.title}
                 height={obj.height}
@@ -44,7 +48,7 @@ const PostDetail = ({ post }) => {
     return (
         <div className='bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8'>
             <div className='relative overflow-hidden shadow-md mb-8'>
-                <img 
+                <Image 
                     src={post.featuredImage.url}
                     alt={post.title}
                     className='object-top h-full w-full rounded-t-lg'
@@ -55,8 +59,8 @@ const PostDetail = ({ post }) => {
                 <div className='flex items-center justify-center mb-4 lg:mb-0 w-full lg:w-auto mr-8'>
                     <img 
                         alt={post.author.name}
-                        height="50px"
-                        width="50px"
+                        height={50}
+                        width={50}
                         className="align-middle rounded-full"
                         src={post.author.photo.url}
                     />
