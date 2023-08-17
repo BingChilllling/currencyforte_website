@@ -1,6 +1,7 @@
 import React from 'react';
 import moment from 'moment';
-import Image from 'next/image';
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import Link from 'next/link';
 
 const FeaturedPostCard = ({ post }) => (
@@ -11,13 +12,14 @@ const FeaturedPostCard = ({ post }) => (
       <p className="text-white mb-4 text-shadow font-semibold text-xs">{moment(post.createdAt).format('MMM DD, YYYY')}</p>
       <p className="text-white mb-4 text-shadow font-semibold text-2xl text-center">{post.title}</p>
       <div className="flex items-center absolute bottom-5 w-full justify-center">
-        <Image
+        <LazyLoadImage
           unoptimized
           alt={post.author.name}
           height={30}
           width={30}
           className="align-middle drop-shadow-lg rounded-full"
           src={post.author.photo.url}
+          effect='blur'
         />
         <p className="inline align-middle text-white text-shadow ml-2 font-medium">{post.author.name}</p>
       </div>

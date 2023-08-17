@@ -1,5 +1,7 @@
 import React from 'react';
 import moment from 'moment';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const PostDetail = ({ post }) => {
   const getContentFragment = (index, text, obj, type) => {
@@ -66,12 +68,13 @@ const PostDetail = ({ post }) => {
       <div className='px-4 lg:px-0'>
         <div className='flex items-center mb-8 w-full'>
           <div className='flex items-center justify-center mb-4 lg:mb-0 w-full lg:w-auto mr-8'>
-            <img
+            <LazyLoadImage
               alt={post.author.name}
               height="50px"
               width="50px"
               className="align-middle rounded-full"
               src={post.author.photo.url}
+              effect='blur'
             />
             <p className="inline align-middle text-gray-700 ml-2 text-lg">{post.author.name}</p>
           </div>

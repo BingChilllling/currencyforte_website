@@ -1,16 +1,20 @@
 import React from 'react';
 import moment from 'moment/moment';
 import Link from 'next/link';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const PostCard = ({ post }) => {
     return (
         <div className='bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8'>
             <div className='relative overflow-hidden shadow-md pb-80 mb-7'>
-                <img
-                    src={post.featuredImage.url}
-                    alt={post.title}
-                    className='object-top absolute h-80 w-full object-cover shadow-lg rounded-t-lg'
-                />
+                <div className="blur-mode">
+                    <LazyLoadImage
+                        src={post.featuredImage.url}
+                        alt={post.title}
+                        className='object-top absolute h-80 w-full object-cover shadow-lg rounded-t-lg'
+                    />
+                </div>
             </div>
             <h1 className='transition duration-700 text-center mb-8 cursor-pointer
                 hover:text-yellow-600 text-3xl font-semibolf'>
@@ -21,12 +25,13 @@ const PostCard = ({ post }) => {
                 <div className='block lg:flex text-center items-center justify-center
                 mb-8 w-full'>
                     <div className='flex items-center justify-center mb-4 lg:mb-0 w-full lg:w-auto mr-8'>
-                        <img 
+                        <LazyLoadImage 
                             alt={post.author.name}
                             height="50px"
                             width="50px"
                             className="align-middle rounded-full"
                             src={post.author.photo.url}
+                            effect="blur"
                         />
                         <p  className="inline align-middle text-gray-700 ml-2 text-lg">{post.author.name}</p>
                     </div>
