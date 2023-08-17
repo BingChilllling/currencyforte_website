@@ -30,12 +30,13 @@ const PostDetail = ({ post }) => {
         return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
       case 'image':
         return (
-          <img
+          <LazyLoadImage
             key={index}
             alt={obj.title}
             height={obj.height}
             width={obj.width}
             src={obj.src}
+            effect='blur'
           />
         );
       case 'video':
