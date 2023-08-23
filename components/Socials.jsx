@@ -1,4 +1,5 @@
-import React from 'react'
+import Image from 'next/image';
+import React from 'react';
 
 const Socials = () => {
   return (
@@ -9,7 +10,7 @@ const Socials = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <img alt="twitter-link" src={require("../assets/twitter.png")} />
+          <img alt="twitter-link" src="/twitter.png" />
         </a>
         <a
           className="hover:opacity-50 transition duration-500"
@@ -17,7 +18,7 @@ const Socials = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <img alt="facebook-link" src={require("../assets/facebook.png")} />
+          <img alt="facebook-link" src="/facebook.png" />
         </a>
         <a
           className="hover:opacity-50 transition duration-500"
@@ -25,7 +26,7 @@ const Socials = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <img alt="instagram-link" src={require("../assets/instagram.png")} />
+          <img alt="instagram-link" src="/instagram.png" />
         </a>
       </div>
   )
