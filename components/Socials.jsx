@@ -1,4 +1,6 @@
-import Image from 'next/image';
+import facebook from '../assets/facebook.png'
+import instagram from '../assets/instagram.png'
+import twitter from '../assets/twitter.png'
 import React from 'react';
 
 const Socials = () => {
@@ -10,7 +12,7 @@ const Socials = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <img alt="twitter-link" src="/twitter.png" />
+          <img alt="twitter-link" src={twitter} />
         </a>
         <a
           className="hover:opacity-50 transition duration-500"
@@ -18,7 +20,7 @@ const Socials = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <img alt="facebook-link" src="/facebook.png" />
+          <img alt="facebook-link" src={facebook} />
         </a>
         <a
           className="hover:opacity-50 transition duration-500"
@@ -26,7 +28,7 @@ const Socials = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <img alt="instagram-link" src="/instagram.png" />
+          <img alt="instagram-link" src={instagram} />
         </a>
       </div>
   )
