@@ -1,6 +1,6 @@
-import facebook from '../assets/facebook.png'
-import instagram from '../assets/instagram.png'
-import twitter from '../assets/twitter.png'
+import facebook from '../assets/facebook.PNG'
+import instagram from '../assets/instagram.PNG'
+import twitter from '../assets/twitter.PNG'
 import React from 'react';
 
 const Socials = () => {
