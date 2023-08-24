@@ -3,7 +3,7 @@ import { Socials } from './';
 
 const Footer = () => {
   return (
-    <footer className='footer container mx-auto px-10 '> 
+    <footer className='footer container mx-auto px-10'> 
         <div className="border-t w-full inline-block border-blue-400 py-8">
             <Socials/>
             <div className="md:flex justify-center md:justify-between text-center">
