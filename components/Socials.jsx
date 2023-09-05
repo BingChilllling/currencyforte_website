@@ -1,7 +1,6 @@
 import React from 'react';
-import Image from 'next/image';
-import instagram from '../public/assets/instagram.PNG';
-import facebook from '../public/assets/facebook.PNG';
+import instagram from '../public/instagram-icon-white-on-black.png';
+import facebook from '../public/assets/facebook-circle.svg';
 import twitter from '../public/assets/twitter.PNG';
 
 const Socials = () => {
