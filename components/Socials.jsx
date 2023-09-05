@@ -1,7 +1,7 @@
 import React from 'react';
 import instagram from '../public/instagram-icon-white-on-black.png';
-import facebook from '../public/assets/facebook-circle.svg';
-import twitter from '../public/assets/twitter.PNG';
+import facebook from '../public/facebook-circle.svg';
+import twitter from '../public/twitter.PNG';
 
 const Socials = () => {
   return (
