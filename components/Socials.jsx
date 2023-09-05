@@ -13,11 +13,10 @@ const Socials = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <Image
-              height={50}
-              width={50}
-              src={twitter}
-            />
+          <img
+            alt="twitter"
+            src={twitter}
+          />
         </a>
         <a
           className="hover:opacity-50 transition duration-500"
@@ -25,9 +24,8 @@ const Socials = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <Image
-            height={50}
-            width={50}
+          <img
+            alt="facebook"
             src={facebook}
           />
         </a>
@@ -37,9 +35,8 @@ const Socials = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <Image
-            height={50}
-            width={50}
+          <img
+            alt="instagram"
             src={instagram}
           />
         </a>
