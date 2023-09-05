@@ -1,5 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
+import instagram from '../public/assets/instagram.svg';
+import facebook from '../public/assets/facebook.svg';
+import twitter from '../public/assets/twitter.svg';
 
 const Socials = () => {
   return (
@@ -13,7 +16,7 @@ const Socials = () => {
           <Image
               height={50}
               width={50}
-              src="../assets/twitter.svg"
+              src={twitter}
             />
         </a>
         <a
@@ -25,7 +28,7 @@ const Socials = () => {
           <Image
             height={50}
             width={50}
-            src="../assets/facebook.svg"
+            src={facebook}
           />
         </a>
         <a
@@ -37,7 +40,7 @@ const Socials = () => {
           <Image
             height={50}
             width={50}
-            src="../assets/instagram.svg"
+            src={instagram}
           />
         </a>
       </div>
