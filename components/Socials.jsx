@@ -1,6 +1,3 @@
-import facebook from '../assets/facebook.PNG'
-import instagram from '../assets/instagram.PNG'
-import twitter from '../assets/twitter.PNG'
 import React from 'react';
 
 const Socials = () => {
@@ -12,7 +9,7 @@ const Socials = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <img alt="twitter-link" src={twitter} />
+          <img alt="twitter-link" src="assets/twitter.svg" />
         </a>
         <a
           className="hover:opacity-50 transition duration-500"
@@ -20,7 +17,7 @@ const Socials = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <img alt="facebook-link" src={facebook} />
+          <img alt="facebook-link" src="assets/facebook.svg"/>
         </a>
         <a
           className="hover:opacity-50 transition duration-500"
@@ -28,7 +25,7 @@ const Socials = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <img alt="instagram-link" src={instagram} />
+          <img alt="instagram-link" src="assets/instagram.svg" />
         </a>
       </div>
   )
