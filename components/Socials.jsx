@@ -9,7 +9,11 @@ const Socials = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <img alt="twitter-link" src={require("../assets/twitter.svg")}/>
+          <Image
+              height={50}
+              width={50}
+              src="../assets/twitter.svg"
+            />
         </a>
         <a
           className="hover:opacity-50 transition duration-500"
@@ -17,7 +21,11 @@ const Socials = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <img alt="facebook-link" src={require("../assets/facebook.svg")}/>
+          <Image
+            height={50}
+            width={50}
+            src="../assets/facebook.svg"
+          />
         </a>
         <a
           className="hover:opacity-50 transition duration-500"
@@ -25,7 +33,11 @@ const Socials = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <img alt="instagram-link" src={require("../assets/instagram.svg")}/>
+          <Image
+            height={50}
+            width={50}
+            src="../assets/instagram.svg"
+          />
         </a>
       </div>
   )
